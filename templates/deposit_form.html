@@ -1,5 +1,24 @@
-<form action="/deposit" method="post">
-  <input type="text" name="phone" placeholder="Enter phone number" required>
-  <input type="number" name="amount" placeholder="Enter amount" required>
-  <button type="submit">Deposit with PayHero</button>
-</form>
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>PayHero Deposit</title>
+  </head>
+  <body>
+    <h2>Deposit with PayHero</h2>
+    <form action="/deposit" method="post">
+      <label>
+        Phone (2547XXXXXXXX or 07XXXXXXXX):
+        <input name="phone" required placeholder="2547XXXXXXXX" />
+      </label>
+      <br/>
+      <label>
+        Amount:
+        <input name="amount" type="number" min="1" required placeholder="Amount" />
+      </label>
+      <br/>
+      <input type="hidden" name="reference" value="Deposit via Flask" />
+      <button type="submit">Deposit</button>
+    </form>
+  </body>
+</html>
